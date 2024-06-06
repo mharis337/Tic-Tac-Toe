@@ -1,0 +1,32 @@
+
+.tic-tac-toe{
+    display: grid;
+    grid-template-columns:repeat(3, auto);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.cell{
+    width:100px;
+    height: 100px;
+    background-color: rgb(175, 173, 173);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.cell.x::before{
+    content: 'X';
+}
+
+.cell.o::before{
+    content: 'O';
+}
+
