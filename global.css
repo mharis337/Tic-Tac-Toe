@@ -1,9 +1,25 @@
+body{
+    margin:0px;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top:20%;
+
+}
+.title{
+    font-size: 50px;
+    font-family:fantasy;
+    font-weight: bold;
+}
 
 .tic-tac-toe{
     display: grid;
     grid-template-columns:repeat(3, auto);
     width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-content: center;
 
