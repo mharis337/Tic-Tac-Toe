@@ -1,12 +1,15 @@
 const cells = document.querySelectorAll('.cell');
 const turn = document.querySelector('.title');
+const end = document.querySelector('.end_screen');
+const result = document.querySelector('.results');
+const board = document.querySelector('.display');
 let isXTurn = true;
 
 
 
 cells.forEach(function(cell) {
     cell.addEventListener('click', () => {
-        if (!cell.classList.contains('x') && !cell.classList.contains('o')) {
+        if (!cell.classList.contains('x') && !cell.classList.contains('o') && !cell.classList.contains('disabled')) {
             if (isXTurn) {
                 cell.classList.add('x');
                 turn.textContent = "It is O's Turn";
@@ -17,11 +20,20 @@ cells.forEach(function(cell) {
             }
             const winner = winCheck();
             if (winner) {
-               
-                alert(`${winner} wins!`);
                 cells.forEach(cell => cell.classList.add('disabled'));
+                setTimeout(function(){
+                    end.classList.remove('hidden');
+                    board.classList.add('hidden');
+                    result.textContent = "The winner is " + winner + "!";
+
+                }, 1000);
+
             } else if ([...cells].every(cell => cell.classList.contains('x') || cell.classList.contains('o'))) {
-                alert("It's a draw!");
+                setTimeout(function(){
+                    end.classList.remove('hidden');
+                    board.classList.add('hidden');
+                    result.textContent = "Its a draw!";
+                }, 1000);
             }
             
             isXTurn = !isXTurn;
@@ -29,6 +41,11 @@ cells.forEach(function(cell) {
         }
     });
 });
+
+
+
+
+
 function winCheck() {
     const winnerlist = [
         [0, 1, 2],
@@ -56,11 +73,15 @@ function winCheck() {
     }
     return null;
 };
+
+
 document.querySelector('.restart').addEventListener('click', restart);
 function restart() {
     cells.forEach(cell => {
         cell.classList.remove('x', 'o', 'disabled');
     });
+    end.classList.add('hidden');
+    board.classList.remove('hidden');
     isXTurn = true;
     turn.textContent = "It is X's Turn";
 };

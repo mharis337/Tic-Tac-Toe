@@ -11,15 +11,15 @@
 - Grid Color: Grey
 
 # Document Board
-- Large 3x3 Grid
-- Grey background
+- Large 3x3 light blue Grid
+- Blue background
 - Marks placed in the center of a cell
 - Large title above the grid indicating the current turn
 
 # Document Game Components
 
 ## Starting Screen
-- The starting screen contains a title displaying "Tic-Tac-Toe" and a blue button below with the text "Start".
+- The game starts with an empty 3x3 grid with the title "X's turn" above.
 
 ## In-Game
 - Large grey 3x3 grid
@@ -28,7 +28,7 @@
 
 ## End Game
 - When a player creates a line (vertically, horizontally, diagonally) with their marks, or there are no more empty squares, a grey transparent screen appears with white text indicating if it was a draw or who won.
-- A blue button underneath with the text "Play again" is displayed.
+- A yellow button underneath with the text "Play again" is displayed.
 
 ## Header
 - Text shows whose turn it is.
