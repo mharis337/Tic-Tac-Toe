@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 
 Names: Muhammad Haris & Ahmed Omar\
-Student #'s: 300157052 &\
+Student #'s: 300157052 & 300267489\
 [GitHub](https://github.com/mharis337/Tic-Tac-Toe) \
 [Design System](/docs/design_system.md)\
 [Portfolio](https://github.com/mharis337/Portfolio)
